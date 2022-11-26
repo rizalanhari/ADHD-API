@@ -3,7 +3,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-# dataTrain = pd.read_csv("dataTrainAPI.csv")
+dataTrain = pd.read_csv("dataTrainAPI.csv")
 
 @app.route('/')
 def getHello():
