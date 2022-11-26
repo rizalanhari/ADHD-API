@@ -1,9 +1,9 @@
 from flask import Flask, jsonify, request
 import pandas as pd
 
-dataTrain = pd.read_csv("dataTrainAPI.csv")
-
 app = Flask(__name__)
+
+dataTrain = pd.read_csv("dataTrainAPI.csv")
 
 @app.route('/')
 def getHello():
