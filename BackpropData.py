@@ -10,7 +10,7 @@ def predictUser(data):
     y_train = onehot_enc(Ytrain)
 
     w, ep, mse = bp_fit(X_train, y_train, layer_conf=(
-        45, 4, 4), learn_rate=.1, max_epoch=2000, max_error=.1, print_per_epoch=100)
+        45, 7, 4), learn_rate=.01, max_epoch=100000, max_error=.1, print_per_epoch=500)
     print(f'Epochs: {ep}, MSE: {mse}')
 
     predict = bp_predict(normalisasi(data), w)
@@ -36,7 +36,7 @@ def predictAdmin(jmlDataTrain, jmlDataTest, lRate, nHidden):
     y_test = onehot_enc(Ytest)
 
     w, ep, mse = bp_fit(X_train, y_train, layer_conf=(
-        45, nHidden, 4), learn_rate=lRate, max_epoch=2000, max_error=.1, print_per_epoch=100)
+        45, nHidden, 4), learn_rate=lRate, max_epoch=100000, max_error=.1, print_per_epoch=500)
     print(f'Epochs: {ep}, MSE: {mse}')
 
     predict = bp_predict(X_test, w)

@@ -33,6 +33,11 @@ def predictA():
     lrate = float(request.args.get('lrate'))
     neuronh = int(request.args.get('neuronh'))
     output, true, acc = predictAdmin(train, test, lrate, neuronh)
+    print("Train: ", train)
+    print("Test: ", test)
+    print("nHidden: ", neuronh)
+    print("lrate: ", lrate)
+    print("Acc: ", acc)
     output2 = np.append(output, acc)
     true2 = np.append(true, acc)
     heading = []
