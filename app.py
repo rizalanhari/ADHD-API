@@ -11,7 +11,7 @@ question = pd.read_csv("https://raw.githubusercontent.com/rizalanhari/ADHD-API/m
 
 @app.route('/')
 def getHello():
-    return "Hello, API ADHD"
+    return "Hello, API ADHD."
 
 @app.route('/datatrain')
 def getDataTrain():
